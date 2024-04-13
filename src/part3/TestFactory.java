@@ -8,7 +8,7 @@ public class TestFactory {
     public Object[] createInstances() {
         return new Object[]{
                 new TestWithTestNG("Random param"),
-                new TestWithTestNG(""),
+                new TestWithTestNG("Another param"),
                 new TestWithTestNG("Also non-zero param")
         };
     }
