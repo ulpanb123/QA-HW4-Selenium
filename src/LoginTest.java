@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest {
     private WebDriver chromeDriver;
-     private WebDriver firefoxDriver;
+    private WebDriver firefoxDriver;
 
     @BeforeClass
     public void setUp() {
@@ -33,7 +33,7 @@ public class LoginTest {
         String password = "testpassword";
 
         testLogin(chromeDriver, username, password);
-        /*    testLogin(firefoxDriver, username, password);*/
+        testLogin(firefoxDriver, username, password);
     }
 
     private void testLogin(WebDriver driver, String username, String password) {
@@ -58,7 +58,7 @@ public class LoginTest {
         String password = "invalidpassword";
 
         testInvalidLogin(chromeDriver, username, password);
-          testInvalidLogin(firefoxDriver, username, password);
+        testInvalidLogin(firefoxDriver, username, password);
     }
 
     private void testInvalidLogin(WebDriver driver, String username, String password) {
@@ -80,7 +80,7 @@ public class LoginTest {
     @AfterClass
     public void tearDown() {
         chromeDriver.quit();
-           firefoxDriver.quit();
+        firefoxDriver.quit();
     }
 }
 
