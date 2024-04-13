@@ -1,3 +1,5 @@
+package part2;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -37,7 +39,7 @@ public class LoginTest {
     }
 
     private void testLogin(WebDriver driver, String username, String password) {
-        driver.get("file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/loginwebsite/login.html");
+        driver.get("file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/part2/html/login.html");
 
         WebElement usernameInput = driver.findElement(By.id("username"));
         WebElement passwordInput = driver.findElement(By.id("password"));
@@ -49,7 +51,7 @@ public class LoginTest {
 
         // Check if the welcome page is loaded
         String currentUrl = driver.getCurrentUrl();
-        Assert.assertEquals(currentUrl, "file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/loginwebsite/welcome.html");
+        Assert.assertEquals(currentUrl, "file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/part2/html/welcome.html");
     }
 
     @Test
@@ -62,7 +64,7 @@ public class LoginTest {
     }
 
     private void testInvalidLogin(WebDriver driver, String username, String password) {
-        driver.get("file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/loginwebsite/login.html");
+        driver.get("file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/part2/html/login.html");
 
         WebElement usernameInput = driver.findElement(By.id("username"));
         WebElement passwordInput = driver.findElement(By.id("password"));
@@ -74,7 +76,7 @@ public class LoginTest {
 
         // Check if the login page is still loaded
         String currentUrl = driver.getCurrentUrl();
-        Assert.assertNotEquals(currentUrl, "file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/loginwebsite/welcome.html");
+        Assert.assertNotEquals(currentUrl, "file:///Users/ulpanb/IdeaProjects/SeleniumProject/src/part2/html/welcome.html");
     }
 
     @AfterClass
